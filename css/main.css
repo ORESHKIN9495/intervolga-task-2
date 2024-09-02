@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 300 16px / 1.64 system-ui, sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  grid-column: 1 / -1;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+form {
+  border: 1px solid;
+  display: grid;
+  gap: 20px;
+  grid-template: auto / repeat(2, 1fr);
+  max-width: 600px;
+  padding: 40px;
+}
+
+label {
+  grid-column: 1 / -1;
+}
+
+input {
+  border: 1px solid;
+  box-shadow: none;
+  display: block;
+  margin: 5px 0 0;
+  outline: none;
+  padding: 10px 40px;
+  width: 100%;
+}
+
+.date {
+  margin: 0;
+  position: absolute;
+  visibility: hidden;
+}
+
+.custom-date {
+  grid-column: 1 / -1;
+}
+
+.custom-date__container {
+  border: 1px solid;
+  display: grid;
+  grid-template: auto / 1fr auto;
+  margin: 5px 0 0;
+  padding: 10px 40px;
+  place-items: center;
+  position: relative;
+}
+
+.custom-date__input {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: 1px solid;
+  outline: none;
+  padding: 20px 40px;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.series {
+  display: grid;
+  gap: 0 20px;
+  grid-template: auto / repeat(2, 1fr);
+}
+
+.series > span {
+  grid-column: 1 / -1;
+}
+
+.error {
+  border-color: tomato;
+}
+
+.error-text {
+  color: tomato;
+  font-size: 12px;
+  margin: 10px 0 0;
+  grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    grid-template: auto / 1fr;
+  }
+
+  .series {
+    grid-template: auto / 1fr;
+  }
+}
